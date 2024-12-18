@@ -1,21 +1,21 @@
 import Config from './config';
 import { DocumentCollection } from 'arangojs/collection';
 
-export interface IGroup {
-  _key?: string;
-  name: string;
+export interface IAddress {
+  _key?: string; // Email address
   domain: string;
+  accountId: string;
   createdAt: Date;
   updatedAt: Date;
 }
 
-const model = Config.collection('group') as DocumentCollection<IGroup>;
+const model = Config.collection('address') as DocumentCollection<IAddress>;
 model.exists().then((exists) => {
   if (!exists) {
     model.create({
       waitForSync: true,
-    }).then(() => {
-      console.log('Collection group created');
+    }).then(async () => {
+      console.log('Collection address created');
     });
   }
 });

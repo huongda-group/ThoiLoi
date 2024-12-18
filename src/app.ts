@@ -1,3 +1,3 @@
 import 'dotenv/config';
 import '@model/index';
-import '@model/group'
+import '@controller/smtp';
