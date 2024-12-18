@@ -1,0 +1,10 @@
+node_modules/
+.idea/
+dist/
+package-lock.json
+.env
+.vscode
+/public/data/*
+/public/temp/*
+.env.production
+/public
